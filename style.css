@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-family: 'PT Serif', serif;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 600px;
+    background-color: gray;
+    top: 50px;
+    left: 35%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media screen and (max-width:1200px) {
+    .container{
+        left: 30%;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+    .container{
+        left: 27%;
+    }
+}
+@media screen and (max-width:800px) {
+    .container{
+        left: 20%;
+        width: 400px;
+    }
+    .image img{
+        max-width: 250px;
+    }
+}
+@media screen and (max-width:600px) {
+    .container{
+        left: 15%;
+        width: 300px;
+    }
+    .image img{
+        max-width: 200px;
+    }
+}
+@media screen and (max-width:400px) {
+    .container{
+        left: 15%;
+        width: 250px;
+    }
+    .image img{
+        max-width: 180px;
+    }
+}
+.box1{
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+    top: 8px;
+    left: 160px;
+    z-index: 1;
+    transition: transform 1s;
+}
+.boxx1{
+    transition: transform  1s;
+}
+.boxx2{
+    transition: transform  1s;
+}
+.box2{
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(172, 223, 33);
+    top: 160px;
+    left: 100px;
+    z-index: 2;
+    transition: transform 1s;
+}
+.container:hover .box1{
+    transform: translate(60%,-22px);
+    transition: transform 1s;
+    mix-blend-mode: color;
+}
+.container:hover .box2{
+    transform: translate(-125px,100px);
+    transition: transform 1s;
+    mix-blend-mode: color;
+}
+.container:hover img{
+    transform: translateY(-80px);
+    transition: transform  1s;
+}
+h1{
+    font-size: 200px;
+    color: white;
+    opacity: 0.3;
+    mix-blend-mode:color-dodge;
+    transition: transform  1s;
+}
+.container:hover h1{
+    transform: scale(1.2);
+    transition: transform 1s ease-out;
+}
+.container:hover .boxx1{
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(80, 201, 5);
+    top: 18px;
+    left: 150px;
+    transform: translate(60%,-22px);
+    transition: transform 1s;
+    mix-blend-mode: color;
+}
+.container:hover .boxx2{
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 0, 0);
+    top: 150px;
+    left: 110px;
+    transform: translate(-125px,100px);
+    transition: transform 1s;
+    mix-blend-mode: color;
+}
+
+.image img {
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    z-index: 9999;
+    transition: transform  1s;
+}
+
+h3 {
+    margin-top: 60px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    transition: transform 1s;
+}
+.container:hover h3{
+    transform: translateY(-30px);
+    transition: transform 1s;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    visibility: hidden;
+}
+.container:hover .size{
+    visibility:visible;
+    transform: translateY(-25px);
+    transition: transform 1s;
+    animation: boxcontent 1s forwards;
+}
+.container:hover .color{
+    visibility:visible;
+    transform: translateY(-25px);
+    transition: transform 1s;
+    animation: boxcontent 1s forwards;
+}
+.container:hover button{
+    visibility:visible;
+    transform: translateY(-25px);
+    transition: transform 1s;
+    animation: boxcontent 1s forwards;
+}
+span{
+    font-size: 20px;
+}
+.box-size{
+    cursor: pointer;
+    padding: 0px 5px;
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+    border-radius: 5px;
+    margin: 5px;
+    
+}
+@keyframes boxcontent {
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.color{
+    margin-top: 12px;
+}
+input[type="button"]{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    border: #000000 2px solid;
+    cursor: pointer;
+}
+.color-btn1{
+    background-color: red;
+}
+.color-btn2{
+    background-color: #ffae00;
+}
+.color-btn3{
+    background-color: #bf00ff;
+}
+.buy-now{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background-color: #dfac1e;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
